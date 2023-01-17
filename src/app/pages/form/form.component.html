@@ -1,0 +1,212 @@
+<nb-card class="card" status="primary">
+
+    <nb-card-header class="card__header">
+        <h2>Mi formulario</h2>
+    </nb-card-header>
+
+
+    <!-- Simple form -->
+    <nb-card-body action="" class="card__body">
+        <input nbInput type="text" placeholder="Nombre">
+
+        <input nbInput type="text" placeholder="Apellido">
+
+        <!-- <select name="select">
+            <option *ngFor="let o of listSelect" [value]="o">{{o}}</option>
+            <optgroup label="Sauropods">
+                <option>Diplodocus</option>
+                <option>Saltasaurus</option>
+                <option>Apatosaurus</option>
+            </optgroup>
+        </select>  -->
+
+        <nb-select status="primary" filled shape="round" size="tiny" #selectNebular>
+            <nb-option *ngFor="let o of listSelect" [value]="o">{{o}}</nb-option>
+            <nb-option-group title="Sauropods">
+                <nb-option>Diplodocus</nb-option>
+                <nb-option>Saltasaurus</nb-option>
+                <nb-option>Apatosaurus</nb-option>
+            </nb-option-group>
+        </nb-select>
+
+        <div class="card__body--grid">
+            <label for="file">File progress:</label>
+
+            <!-- <progress id="file" max="100" value="70"> 70% </progress> -->
+            <nb-progress-bar [value]="50" status="success" size="tiny">custom</nb-progress-bar>
+        </div>
+
+        <textarea nbInput name="des" id="desc" cols="30" rows="3" placeholder="Descripción" value="Descripción">
+        </textarea>
+
+        <fieldset>
+            <legend>Choose:</legend>
+            <div>
+                <!-- <input type="checkbox" id="scales" name="scales" checked>
+                <label for="scales">Scales</label> -->
+                <nb-checkbox status="info">Valor 1</nb-checkbox>
+            </div>
+
+            <div>
+                <!-- <input type="checkbox" id="horns" name="horns">
+                <label for="horns">Horns</label> -->
+                <nb-checkbox status="danger">Valor 2</nb-checkbox>
+            </div>
+        </fieldset>
+    </nb-card-body>
+    <!-- Simple form -->
+
+
+    <nb-card-footer class="card__footer">
+        <button nbButton size="giant" status="success">Enviar</button>
+        <button nbButton shape="round" status="primary" outline>Cancelar</button>
+    </nb-card-footer>
+
+
+</nb-card>
+
+
+<nb-reveal-card>
+    <nb-card-front>
+
+        <nb-card>
+            <nb-card-body>
+                Información importante
+            </nb-card-body>
+        </nb-card>
+
+
+    </nb-card-front>
+
+    <nb-card-back>
+
+        <nb-card>
+            <nb-card-body>
+                Esto es otra información
+            </nb-card-body>
+        </nb-card>
+    </nb-card-back>
+</nb-reveal-card>
+
+
+
+<nb-accordion multi>
+
+    <nb-accordion-item>
+        <nb-accordion-item-header>
+            Product Details
+        </nb-accordion-item-header>
+        <nb-accordion-item-body>
+            A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+            Originally, nebula was a name for any diffuse astronomical object,
+            including galaxies beyond the Milky Way.
+        </nb-accordion-item-body>
+    </nb-accordion-item>
+
+    <nb-accordion-item>
+        <nb-accordion-item-header>
+            Reviews
+        </nb-accordion-item-header>
+        <nb-accordion-item-body>
+            A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+            Originally, nebula was a name for any diffuse astronomical object,
+            including galaxies beyond the Milky Way.
+        </nb-accordion-item-body>
+    </nb-accordion-item>
+
+    <nb-accordion-item>
+        <nb-accordion-item-header>
+            Edit
+        </nb-accordion-item-header>
+        <nb-accordion-item-body>
+            A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+            Originally, nebula was a name for any diffuse astronomical object,
+            including galaxies beyond the Milky Way.
+        </nb-accordion-item-body>
+    </nb-accordion-item>
+
+</nb-accordion>
+
+
+<nb-card>
+
+    <nb-card-body>
+
+        <nb-stepper orientation="horizontal">
+            <nb-step [label]="labelOne">
+                <ng-template #labelOne>First step</ng-template>
+                <h4>Step content #1</h4>
+                <p class="lorem">
+                    Lorizzle ipsum dolizzle stuff fizzle, consectetuer adipiscing break it down.
+                    Nullizzle sapien velizzle, my shizz pimpin', shizzle my nizzle crocodizzle shut the shizzle up,
+                    gravida vizzle, dang.
+                </p>
+                <button nbButton disabled nbStepperNext>prev</button>
+                <button nbButton nbStepperNext>next</button>
+            </nb-step>
+            <nb-step [label]="labelTwo">
+                <ng-template #labelTwo>Second step</ng-template>
+                <h4>Step content #2</h4>
+                <p class="lorem">
+                    Lorizzle ipsum dolizzle stuff fizzle, consectetuer adipiscing break it down.
+                    Nullizzle sapien velizzle, my shizz pimpin', shizzle my nizzle crocodizzle shut the shizzle up,
+                    gravida vizzle, dang.
+                </p>
+                <button nbButton nbStepperPrevious>prev</button>
+                <button nbButton nbStepperNext>next</button>
+            </nb-step>
+            <nb-step label="Third step">
+                <h4>Step content #3</h4>
+                <p class="lorem">
+                    Lorizzle ipsum dolizzle stuff fizzle, consectetuer adipiscing break it down.
+                    Nullizzle sapien velizzle, my shizz pimpin', shizzle my nizzle crocodizzle shut the shizzle up,
+                    gravida vizzle, dang.
+                </p>
+                <button nbButton nbStepperPrevious>prev</button>
+                <button nbButton nbStepperNext>next</button>
+            </nb-step>
+            <nb-step [label]="labelFour">
+                <ng-template #labelFour>Fourth step</ng-template>
+                <h4>Step content #4</h4>
+                <p class="lorem">
+                    Lorizzle ipsum dolizzle stuff fizzle, consectetuer adipiscing break it down.
+                    Nullizzle sapien velizzle, my shizz pimpin', shizzle my nizzle crocodizzle shut the shizzle up,
+                    gravida vizzle, dang.
+                </p>
+                <button nbButton nbStepperPrevious>prev</button>
+                <button nbButton disabled nbStepperNext>next</button>
+            </nb-step>
+        </nb-stepper>
+
+    </nb-card-body>
+
+</nb-card>
+
+
+
+<button nbButton [nbPopover]="templateRef">
+    Click Me
+</button>
+
+<ng-template #templateRef>
+    <div>
+        <span>Hello, Popover!</span>
+    </div>
+</ng-template>
+
+
+<br>
+<br>
+<br>
+
+<!-- <ng-template #dialog let-data let-ref="dialogRef">
+    <nb-card>
+      <nb-card-header>Template Dialog</nb-card-header>
+      <nb-card-body>{{ data }}</nb-card-body>
+      <nb-card-footer>
+        <button nbButton (click)="ref.close()">Close Dialog</button>
+      </nb-card-footer>
+    </nb-card>
+  </ng-template> -->
+
+  <button nbButton (click)="open()">Open Dialog</button>

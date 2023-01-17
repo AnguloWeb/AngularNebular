@@ -1,0 +1,31 @@
+<section class="container">
+
+    <nb-card class="container__card">
+
+        <nb-card-header class="container__card--header">
+            Datos personales
+        </nb-card-header>
+
+        <nb-card-body class="container__card--body" [formGroup]="form">
+            <input type="text" nbInput placeholder="Nombre" fullWidth formControlName="name">
+            <input type="text" nbInput placeholder="Apellido" fullWidth formControlName="lastName">
+            <input type="text" nbInput placeholder="Correo" fullWidth formControlName="email">
+            <input type="number" nbInput placeholder="Edad" fullWidth formControlName="age">
+            <textarea name="description" id="description" cols="30" rows="10" nbInput fullWidth
+                placeholder="Descripción" formControlName="description"></textarea>
+        </nb-card-body>
+
+        <nb-card-footer>
+            <button nbButton status="success" [disabled]="form.invalid" (click)="send()">
+                <nb-icon icon="cloud-upload-outline"></nb-icon>
+                Enviar
+            </button>
+        </nb-card-footer>
+
+    </nb-card>
+
+
+
+
+
+</section>

@@ -1,0 +1,70 @@
+@import "~@nebular/theme/styles/theming";
+@import "~@nebular/theme/styles/themes";
+
+$nb-enable-css-custom-properties: true;
+
+$nb-themes: nb-register-theme(
+  (
+    // color-primary-500: red,
+    angulo-web: black,
+  ),
+  dark,
+  dark
+);
+$nb-themes: nb-register-theme(
+  (
+    angulo-web: yellow,
+  ),
+  cosmic,
+  cosmic
+);
+$nb-themes: nb-register-theme(
+  (
+    angulo-web: green,
+  ),
+  corporate,
+  corporate
+);
+$nb-themes: nb-register-theme(
+  (
+    angulo-web: red,
+  ),
+  default,
+  default
+);
+$nb-themes: nb-register-theme(
+  (
+    color-primary-100: #f2f6ff,
+    color-primary-200: #a9e159,
+    color-primary-300: #89d631,
+    color-primary-400: #72cb10,
+    color-primary-500: #98ff96,
+    color-primary-600: #5ccb5f,
+    color-primary-700: #009929,
+    color-primary-800: #006414,
+    color-primary-900: #003400,
+
+    color-basic-100: #d5ffff,
+    color-basic-200: #9ce0db,
+    color-basic-300: #5dc1b9,
+    color-basic-400: #338b85,
+    color-basic-500: #005954,
+    color-basic-600: #5ccb5f,
+    color-basic-700: #009929,
+    color-basic-800: #006414,
+    color-basic-900: #006414,
+    color-basic-1000: #003400,
+    color-basic-1100: green,
+    
+    color-primary-transparent-100: rgba(173, 255, 47, 0.08),
+    color-primary-transparent-200: rgba(127, 255, 0.16),
+    color-primary-transparent-300: rgba(124, 252, 0, 0.24),
+    color-primary-transparent-400: rgba(0, 255, 0, 0.32),
+    color-primary-transparent-500: rgba(50, 205, 50, 0.4),
+    color-primary-transparent-600: rgba(152, 251, 152, 0.48),
+
+    angulo-web: #006414,
+  ),
+  angulo-web-theme,
+  default
+);

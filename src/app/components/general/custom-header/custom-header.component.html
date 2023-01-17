@@ -1,0 +1,12 @@
+<div class="container">
+    <nb-user [name]="user.name"></nb-user>
+
+    <nb-select [formControl]="currentTheme" (selectedChange)="changeTheme($event)">
+        <nb-option *ngFor="let t of themes" [value]="t">{{t}}</nb-option>
+
+    </nb-select>
+    
+    <button *nbIsGranted="['view', 'logout']" nbButton (click)="logout()">LogOut</button>
+</div>
+
+    

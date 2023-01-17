@@ -1,0 +1,26 @@
+
+
+.card {
+    &__header {
+        padding: 2rem 1rem;
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+        row-gap: 1rem;
+        column-gap: 0.5rem;
+
+        &--grid {
+            display: grid;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+}
